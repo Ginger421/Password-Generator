@@ -2,47 +2,67 @@
 var generateBtn = document.querySelector("#generate");
 
 //assign each potential part of the password to a variable
-var upperCase
-var lowerCase
-var specialCharacters
-var numbers
-var length 
-
+var upperCase;
+var lowerCase;
+var specialCharacters;
+var numbers;
+var userLength;
 
 function charPrompt (params) {
   upperCase = confirm("Has uppercase characters?");
   lowerCase = confirm("Has lowercase letters?");
   specialCharacters = confirm("Has special characters?");
   numbers = confirm("Has numbers?");
-  length = prompt("How long do you want your password to be?");
-  console.log(upperCase, lowerCase, numbers, specialCharacters, length);
-}
-// Write password to the #password input
-// function writePassword() {
-//   var password = generatePassword();
-//   var passwordText = document.querySelector("#password");
-//   var passwordLength = 
+  userLength = parseInt(prompt("How long do you want your password to be?"));
+  console.log(upperCase, lowerCase, numbers, specialCharacters, userLength);
 
-//   passwordText.value = password;
-
-// }
+  if (isNaN(userLength)===true || userLength < 8 || userLength > 128) {
+    alert("password length is not valid")
+    charPrompt()
+  }
+};
 
 // Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+generateBtn.addEventListener("click", charPrompt);
 
-//variables for the password
+function generatePassword() {
+  let nums = "1234567890"
+  let ucLetters = "QWERTYUIOPASDFGHJKLZXCVBNM"
+  let lcLetters = "qwertyuioplkjhgfdsazxcvbnm"
+  let special = "!@#$%^&*()"
+  let userChoice = " "
+  let password = " "
 
-// var lowerCase = ["Include lower case letters?",  
-// "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+  console.log(nums, ucLetters, lcLetters, special, userChoice)
 
- 
-// var upperCase = prompt("Include upper case letters?",
-// "ABCDEFGHIJKLMNOPQRSTUVWXYZ");
+  if (upperCase=true) {
+    userChoice+=ucLetters;
+    console.log(userChoice)
+  }
+  if (lowerCase=true) {
+    userChoice+=lcLetters
+  }
+  if (specialCharacters=true) {
+    userChoice+=special
+  }
+  if (numbers=true) {
+    userChoice+=nums
+  }
+  console.log(userChoice)
 
-// var specialCharacters = prompt("Include special characters?", 
-// "!@#$%^&*-_=")
+  for (let i = 0; i < length; i++) {
+    let randomIndex = Math.floor(Math.random() * userChoice.length)
+    
+    let randomCharacter = userChoice[randomIndex]
 
-// var numbers = prompt("Include numbers?", "1234567890")
+    password = password+=randomCharacter
+  }
+
+  console.log(password)
+};
+
+generatePassword();
+
 
 // var index = Math.floor(Math.random() * lowerCase.length);
 //   var computerChoice = options[index];
