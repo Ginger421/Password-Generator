@@ -13,6 +13,9 @@ This application was designed to generate random passwords. Users can select fro
 ## Installation and Usage
 1. Clone the repository onto your machine. 2. Open the application in the browser. 3. Click the generate password button and use the prompts to select your choices. 5. Copy the random password and use it!
 
+![image](https://user-images.githubusercontent.com/101539821/194995828-ea10f3ba-d6df-4e7d-a454-d74dea3d84bb.png)
+
+
 ## License
 
 ## How to Contribute 
