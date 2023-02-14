@@ -19,10 +19,6 @@ body {
 
 background: linear-gradient(90deg, hsla(179, 83%, 64%, 1) 0%, hsla(338, 75%, 64%, 1) 50%, hsla(14, 92%, 86%, 1) 100%);
 
-background: -moz-linear-gradient(90deg, hsla(179, 83%, 64%, 1) 0%, hsla(338, 75%, 64%, 1) 50%, hsla(14, 92%, 86%, 1) 100%);
-
-background: -webkit-linear-gradient(90deg, hsla(179, 83%, 64%, 1) 0%, hsla(338, 75%, 64%, 1) 50%, hsla(14, 92%, 86%, 1) 100%);
-
 filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#58EFEC", endColorstr="#E85C90", GradientType=1 );
 }
 
